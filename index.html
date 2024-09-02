@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio</title>
-    <link rel="stylesheet" href="assets/swiper-bundle.min.css" />
     <link rel="stylesheet" href="assets/style.css" />
     <link
       rel="stylesheet"
@@ -399,36 +398,40 @@
             </div>
           </div>
 
-          <form action="" class="contact__form grid">
+          <form action="https://api.web3forms.com/submit" method="POST" class="contact__form grid">
             <div class="contact__inputs grid">
+              <input type="hidden" name="access_key" value="2cdbe7f5-482b-4aaa-a43e-cfa76a2c0ced">
+
               <div class="contact__content">
                 <label for="" class="content__label">Name</label>
-                <input type="text" class="contact__input" />
+                <input name="name" type="text" class="contact__input" required />
               </div>
 
               <div class="contact__content">
                 <label for="" class="content__label">Email</label>
-                <input type="Email" class="contact__input" />
+                <input name="Email" type="Email" class="contact__input" required />
               </div>
             </div>
 
             <div class="contact__content">
               <label for="" class="content__label">Message</label>
               <textarea
-                name=""
+                name="message"
                 id=""
                 cols="0"
                 rows="7"
                 class="contact__input"
+                required
               ></textarea>
             </div>
 
             <div>
               <a
-                href=" mailto: jatinkumar9162@gmail.com?subject=Testing out mailto! &body=This is only a test!"
-                class="button button--flex"
+                
+                class="button "
               >
-                Send Message
+
+               <button class="unique" type="submit">Send Message</button> 
                 <i class="uil uil-message button__icon"></i>
               </a>
             </div>
@@ -505,5 +508,7 @@ document.getElementById('close-btn').addEventListener('click', function() {
     <script type="text/javascript" src="assets/swiper-bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/2205d59d52.js" crossorigin="anonymous"></script>
     <script src="assets/ptj.js"></script>
+
+   
   </body>
 </html>

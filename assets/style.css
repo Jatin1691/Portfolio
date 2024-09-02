@@ -163,11 +163,18 @@ img {
 .navbar {
   background-color: #fff;
   padding: 10px;
+  position: fixed;
+
+  justify-content: space-around;
   position: relative;
   z-index: 1000;
 }
 .nav-link{
 color: blue;
+}
+
+.close-btn{
+  padding-right: 5%;
 }
 
 .navbar .container {
@@ -241,7 +248,7 @@ color: blue;
   right: 10px;
   background: none;
   border: none;
-  font-size: 30px;
+  font-size: 40px;
   color: black;
 }
 
@@ -249,11 +256,16 @@ color: blue;
 .sidebar-nav {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .sidebar-nav .nav-item {
-  margin: 20px 0;
+  margin: 15px 0;
+  text-align: center;
+ 
 }
 
 .sidebar-nav .nav-link {
@@ -414,6 +426,15 @@ color: blue;
 .button--white {
   background-color: #fff;
   color: var(--first-color);
+}
+
+.unique{
+  background-color: var(--first-color);
+  border: none;
+  color: #fff;
+  font-size: 0.9rem;
+  align-items: center;
+  justify-content: center;
 }
 
 .button--white:hover {
