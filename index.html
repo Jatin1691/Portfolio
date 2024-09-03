@@ -493,15 +493,28 @@
 
     
     <script>
-    document.getElementById('navbar-toggler').addEventListener('click', function() {
+    // Toggle the sidebar when the navbar-toggler is clicked
+document.getElementById('navbar-toggler').addEventListener('click', function() {
     var sidebar = document.getElementById('sidebar-menu');
     sidebar.classList.add('show');
 });
 
+// Close the sidebar when the close button is clicked
 document.getElementById('close-btn').addEventListener('click', function() {
     var sidebar = document.getElementById('sidebar-menu');
     sidebar.classList.remove('show');
 });
+
+// Close the sidebar when any menu item is clicked
+var sidebarMenuItems = document.querySelectorAll('#sidebar-menu .nav-link');
+
+sidebarMenuItems.forEach(function(menuItem) {
+    menuItem.addEventListener('click', function() {
+        var sidebar = document.getElementById('sidebar-menu');
+        sidebar.classList.remove('show');
+    });
+});
+
   </script>
     
 
