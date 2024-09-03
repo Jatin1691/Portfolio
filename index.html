@@ -84,8 +84,6 @@
 
 
 
-/* Basic styles for the navbar */
-
     </style>
   </head>
 
@@ -426,14 +424,14 @@
             </div>
 
             <div>
-              <a
+              <button class="unique" type="submit"><a
                 
-                class="button "
+                class="button button--flex"
               >
-
-               <button class="unique" type="submit">Send Message</button> 
+                  Submit
                 <i class="uil uil-message button__icon"></i>
               </a>
+              </button>
             </div>
           </form>
         </div>
@@ -493,19 +491,19 @@
 
     
     <script>
-    // Toggle the sidebar when the navbar-toggler is clicked
+   
 document.getElementById('navbar-toggler').addEventListener('click', function() {
     var sidebar = document.getElementById('sidebar-menu');
     sidebar.classList.add('show');
 });
 
-// Close the sidebar when the close button is clicked
+
 document.getElementById('close-btn').addEventListener('click', function() {
     var sidebar = document.getElementById('sidebar-menu');
     sidebar.classList.remove('show');
 });
 
-// Close the sidebar when any menu item is clicked
+
 var sidebarMenuItems = document.querySelectorAll('#sidebar-menu .nav-link');
 
 sidebarMenuItems.forEach(function(menuItem) {

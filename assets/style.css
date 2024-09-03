@@ -1,15 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
-/*================ VARIABLES CSS ==========*/
+
 
 :root {
   --header-height: 3rem;
 
-  /*======= Colors =======*/
-  /* Change Favorite color */
+  
   --hue-color: 240;
 
-  /*========= HSL Color mode =========*/
+ 
   --first-color: hsl(var(--hue-color), 69%, 61%);
   --first-color-second: hsl(var(--hue-color), 69%, 61%);
   --first-color-alt: hsl(var(--hue-color), 57%, 53%);
@@ -23,7 +22,7 @@
   --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
 
-  /*========= Font and typography ===========*/
+
   --body-font: "Poppins", sans-serif;
 
   --big-font-size: 2rem;
@@ -34,13 +33,12 @@
   --small-font-size: 0.813rem;
   --smaller-font-size: 0.75rem;
 
-  /*=========== Font weight ==========*/
+  
 
   --font-medium: 500;
   --font-semi-bold: 600;
 
-  /*============ Margin Bottom ===========*/
-  /* .25rem = 4px, .5rem=8px, .75rem = 12px*/
+  
   --mb-0-25: 0.25rem;
   --mb-0-5: 0.5rem;
   --mb-0-75: 0.75rem;
@@ -50,7 +48,6 @@
   --mb-2-5: 2.5rem;
   --mb-3: 3rem;
 
-  /*============== z index =============*/
   --z-tooltip: 10;
   --z-fixed: 100;
   --z-modal: 1000;
@@ -58,9 +55,7 @@
 
 
 
-/*================= Variables Dark Theme ===============*/
 body.dark-theme {
-  /*========= HSL Color mode =========*/
 
   --first-color-second: hsl(var(--hue-color), 30%, 8%);
   --title-color: hsl(var(--hue-color), 8%, 95%);
@@ -72,7 +67,6 @@ body.dark-theme {
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
 }
 
-/*================= Button Dark/Light ===============*/
 .nav__btns {
   display: flex;
   align-items: center;
@@ -89,7 +83,6 @@ body.dark-theme {
   color: var(--first-color);
 }
 
-/*================= Base ===============*/
 * {
   box-sizing: border-box;
   padding: 0;
@@ -156,7 +149,6 @@ img {
   position: fixed;
   bottom: 0;
   left: 0;
-  /* z-index: var(--z-fixed); */
   background-color: var(--body-color);
 }
 
@@ -184,11 +176,11 @@ color: blue;
 }
 
 .navbar-brand .logo {
-  height: 40px; /* Adjust as needed */
+  height: 40px; 
 }
 
 .navbar-toggler {
-  display: none; /* Hide the toggler by default */
+  display: none; 
   background: none;
   border: none;
   font-size: 30px;
@@ -196,9 +188,9 @@ color: blue;
   color: #000000;
 }
 
-/* Navbar menu styles */
+
 .navbar-menu {
-  display: none; /* Hidden by default */
+  display: none; 
 }
 
 .navbar-nav {
@@ -223,11 +215,11 @@ color: blue;
   color: var(--first-color);
 }
 
-/* Sidebar styles */
+
 .sidebar {
   position: fixed;
   top: 0;
-  left: -250px; /* Hide off-screen by default */
+  left: -250px; 
   width: 250px;
   height: 100%;
   background-color: #fff;
@@ -235,11 +227,11 @@ color: blue;
   color: black;
   transition: left 0.3s ease;
   overflow-y: auto;
-  z-index: 1000; /* Ensure it's above other content */
+  z-index: 1000; 
 }
 
 .sidebar.show {
-  left: 0; /* Slide in */
+  left: 0; 
 }
 
 .sidebar .close-btn {
@@ -252,7 +244,6 @@ color: blue;
   color: black;
 }
 
-/* Sidebar menu styles */
 .sidebar-nav {
   list-style: none;
   padding: 0;
@@ -275,28 +266,27 @@ color: blue;
   padding: 10px;
 }
 
-/* Responsive styles */
 @media (max-width: 768px) {
   .navbar-menu {
-      display: none; /* Hide horizontal menu on small screens */
+      display: none; 
   }
 
   .navbar-toggler {
-      display: block; /* Show the toggler on small screens */
+      display: block; 
   }
 
   .sidebar {
-      display: block; /* Ensure sidebar is block on small screens */
+      display: block; 
   }
 }
 
 @media (min-width: 769px) {
   .navbar-menu {
-      display: flex; /* Show horizontal menu on larger screens */
+      display: flex; 
   }
 
   .sidebar {
-      display: none; /* Hide sidebar on large screens */
+      display: none; 
   }
 }
 
@@ -306,22 +296,18 @@ color: blue;
 }
 
 
-/* Show Menu */
 .show-menu {
   bottom: 0;
 }
 
-/* Active Link */
 #active-link {
   color: var(--first-color);
 }
 
-/* Change Background header */
 .scroll-header {
   box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
 }
 
-/*========HOME=============*/
 .home__container {
   gap: 0.5rem;
 }
@@ -348,7 +334,7 @@ color: blue;
 .home__blob {
   width: 200px;
   fill: var(--first-color);
-  /* fill: hsl(69, 69%, 61%); */
+ 
 }
 /* .home__blob-img {
   width: 180%;
@@ -402,7 +388,6 @@ color: blue;
   font-size: 1.25rem;
 }
 
-/*================== Buttons ===================*/
 .button {
   display: inline-block;
   background-color: var(--first-color);
@@ -429,12 +414,14 @@ color: blue;
 }
 
 .unique{
-  background-color: var(--first-color);
+  /* background-color: var(--first-color); */
   border: none;
-  color: #fff;
-  font-size: 0.9rem;
+  /* color: #fff; */
+  font-size: 1rem;
   align-items: center;
   justify-content: center;
+  /* width: 42%; */
+  height: 70%;
 }
 
 .button--white:hover {
@@ -459,7 +446,6 @@ color: blue;
   color: var(--first-color-alt);
 }
 
-/*===================== About ==================*/
 .about__img {
   width: 170px;
   border-radius: 500%;
@@ -500,7 +486,6 @@ color: blue;
   justify-content: center;
 }
 
-/*===================== SKILLS =========================*/
 
 .section {
   padding: 60px 0;
@@ -521,7 +506,7 @@ color: blue;
   letter-spacing: 0.1em;
 }
 
-/* Container styling */
+
 .skills-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -531,14 +516,13 @@ color: blue;
   padding: 0 1rem;
 }
 
-/* Subtitle styling */
+
 .skills-subtitle {
   font-size: 2rem;
   margin-bottom: 1.5rem;
   /* color: #ffecd2; */
 }
 
-/* Skills data styling */
 .skills-data {
   display: flex;
   align-items: center;
@@ -549,33 +533,33 @@ color: blue;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Skills data hover effect */
+
 .skills-data:hover {
   transform: translateY(-10px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Skills names styling */
+
 .skills-names {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
 
-/* Skills icon styling */
+
 .skills-icon {
   font-size: 2.5rem;
   color: #ffd700;
 }
 
-/* Skills name styling */
+
 .skills-name {
   font-size: 1.5rem;
   font-weight: bold;
   /* color: #fff; */
 }
 
-/* Custom icon size for images */
+
 .skills-container .skills-names img.skills-icon {
   width: 2.5rem;
   height: 2.5rem;
@@ -635,7 +619,7 @@ color: blue;
 
 
 
-/*================ Contact Me ===============*/
+
 
 .contact__container {
   row-gap: 2rem;
@@ -682,7 +666,6 @@ color: blue;
   padding: 0.25rem 0.5rem 0.5rem 0;
 }
 
-/*=================== Footer ==================*/
 
 .footer {
   padding-top: 2rem;
@@ -741,7 +724,6 @@ color: blue;
   color: #fff;
 }
 
-/*==================== Scroll Up ==================*/
 
 .scrollup {
   position: fixed;
@@ -764,12 +746,11 @@ color: blue;
   color: #fff;
 }
 
-/* Show Scroll */
+
 .show-scroll {
   bottom: 5rem;
 }
 
-/*====================== Scroll Bar =====================*/
 
 ::-webkit-scrollbar {
   width: 0.6rem;
@@ -786,26 +767,9 @@ color: blue;
   background-color: var(--text-color-light);
 }
 
-/*======================== Media Queries ======================*/
 
-/* For Small Devices */
 @media screen and (max-width: 350px) {
-  /* .container {
-    margin-left: var(--mb-1);
-    margin-right: var(--mb-1);
-  } */
-
-  /* .nav__menu {
-    padding: 2rem 0.25rem 4rem;
-  }
-
-  .nav__list {
-    column-gap: 0;
-  }
-
-  .home__content {
-    grid-template-columns: 0.25fr 3fr;
-  } */
+ 
 
   .home__blob {
     width: 180px;
@@ -840,7 +804,7 @@ color: blue;
   }
 }
 
-/* For medium Devices */
+
 @media screen and (min-width: 568px) {
   .home__content {
     grid-template-columns: max-content 1fr 1fr;
@@ -899,25 +863,7 @@ color: blue;
     padding: 0 1rem;
   }
 
-  /* .nav {
-    height: calc(var(--header-height) + 1.5rem);
-    column-gap: 1rem;
-  }
-
-  .nav__icon,
-  .nav__close,
-  .nav__toggle {
-    display: none;
-  }
-
-  .nav__list {
-    display: flex;
-    column-gap: 2rem;
-  }
-
-  .nav__menu {
-    margin-left: auto;
-  } */
+ 
   .change-theme {
     margin: 0;
   }
@@ -1028,7 +974,6 @@ color: blue;
   }
 }
 
-/* For large devices */
 
 @media screen and (min-width: 968px) {
   .header,
